@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Poppins", sans-serif;
+  --primary-color: #6366f1;
+}
+
+@layer base {
+  input,
+  textarea {
+    @apply w-full border-[2px] border-indigo-800 m-2 px-2;
+  }
+}
