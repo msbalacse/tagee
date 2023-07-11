@@ -34,4 +34,12 @@ const post = (req, res) => {
   );
 };
 
-module.exports = { getAllPosts, getPostbyID, post, getByTag };
+const deletePostbyID = (req, res) => {
+  const { id } = req.params;
+  pool.query(quaries.deletePost, [id], (err, results) => {
+    if (err) throw err;
+    res.send("delete post");
+  });
+};
+
+module.exports = { getAllPosts, getPostbyID, post, getByTag, deletePostbyID };

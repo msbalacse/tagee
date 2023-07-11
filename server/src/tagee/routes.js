@@ -7,5 +7,6 @@ router.get("/", controllers.getAllPosts);
 router.post("/", controllers.post);
 router.get("/:id", controllers.getPostbyID);
 router.get("/tag/:tag", controllers.getByTag);
+router.delete("/:id", controllers.deletePostbyID);
 
 module.exports = router;
